@@ -14,6 +14,7 @@
             --card-bg: #ffffff;
             --shadow: 0 10px 30px -10px rgba(0,0,0,0.08);
             --radius: 20px;
+            --primary: #1a73e8;
         }
 
         body {
@@ -33,7 +34,7 @@
         /* ヘッダー */
         header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             animation: fadeIn 0.8s ease;
         }
         
@@ -50,7 +51,24 @@
         .subtitle {
             color: var(--text-sub);
             font-size: 1rem;
+            margin-bottom: 20px;
         }
+
+        /* API Help Link */
+        .api-help-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #e8f0fe;
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .api-help-btn:hover { background: #d2e3fc; }
 
         /* グリッドレイアウト */
         .app-grid {
@@ -157,6 +175,11 @@
     <header>
         <h1>Nonbiriikimasu Apps</h1>
         <div class="subtitle">AIを活用した便利なツール集</div>
+        
+        <a href="help.html" target="_blank" class="api-help-btn">
+            <span class="material-icons-round" style="font-size:18px;">vpn_key</span>
+            APIキーの取得方法・使い方はこちら
+        </a>
     </header>
 
     <div class="app-grid">
