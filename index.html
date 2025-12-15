@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My AI Apps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <style>
+        :root {
+            --bg-body: #f8f9fa;
+            --text-main: #2d3748;
+            --text-sub: #718096;
+            --card-bg: #ffffff;
+            --shadow: 0 10px 30px -10px rgba(0,0,0,0.08);
+            --radius: 20px;
+        }
+
+        body {
+            font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* ヘッダー */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeIn 0.8s ease;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-sub);
+            font-size: 1rem;
+        }
+
+        /* グリッドレイアウト */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 10px;
+        }
+
+        /* アプリカード */
+        .app-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid rgba(0,0,0,0.02);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            animation: slideUp 0.6s ease backwards;
+        }
+
+        /* 順番にふわっと表示させる */
+        .app-card:nth-child(1) { animation-delay: 0.1s; }
+        .app-card:nth-child(2) { animation-delay: 0.2s; }
+        .app-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .app-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.12);
+        }
+
+        /* アイコンエリア */
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+            color: white;
+        }
+
+        /* 各アプリの色設定 */
+        .vlog-color { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); color: #d63384; }
+        .sanpo-color { background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); color: #059669; }
+        .trip-color { background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); color: #3b82f6; }
+
+        .app-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+        }
+
+        .app-desc {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin: 0 0 20px 0;
+            flex-grow: 1; /* 高さを揃える */
+        }
+
+        .open-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            background: #f1f5f9;
+            color: var(--text-main);
+        }
+
+        .app-card:hover .open-btn {
+            background: var(--text-main);
+            color: #fff;
+        }
+
+        /* アニメーション */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: var(--text-sub);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>My AI Apps</h1>
+        <div class="subtitle">AIを活用した便利なツール集</div>
+    </header>
+
+    <div class="app-grid">
+        
+        <a href="https://nonbiriikimasu.github.io/Vlog/" class="app-card" target="_blank">
+            <div class="icon-box vlog-color">
+                <span class="material-icons-round">videocam</span>
+            </div>
+            <h2 class="app-title">AI Vlog Planner</h2>
+            <p class="app-desc">
+                動画の構成案をAIが自動作成。「どこをどう撮ればいいか」のアドバイスや、Bロールのアイデアも提案します。
+            </p>
+            <div class="open-btn">アプリを開く <span class="material-icons-round" style="font-size:16px;">arrow_forward</span></div>
+        </a>
+
+        <a href="https://nonbiriikimasu.github.io/Sanpo/" class="app-card" target="_blank">
+            <div class="icon-box sanpo-color">
+                <span class="material-icons-round">directions_walk</span>
+            </div>
+            <h2 class="app-title">AI お散歩ナビ</h2>
+            <p class="app-desc">
+                経由地を指定して、最適な散歩ルートを提案。Googleマップと連携し、日々のウォーキングを楽しくします。
+            </p>
+            <div class="open-btn">アプリを開く <span class="material-icons-round" style="font-size:16px;">arrow_forward</span></div>
+        </a>
+
+        <a href="https://nonbiriikimasu.github.io/Trip/" class="app-card" target="_blank">
+            <div class="icon-box trip-color">
+                <span class="material-icons-round">flight_takeoff</span>
+            </div>
+            <h2 class="app-title">AI Travel Planner</h2>
+            <p class="app-desc">
+                予算や要望に合わせて、日帰り旅行や観光プランを作成。おすすめスポットを星評価付きで提案します。
+            </p>
+            <div class="open-btn">アプリを開く <span class="material-icons-round" style="font-size:16px;">arrow_forward</span></div>
+        </a>
+
+    </div>
+
+    <footer>
+        &copy; 2024 My AI Apps Collection
+    </footer>
+</div>
+
+</body>
+</html>
