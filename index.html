@@ -54,21 +54,25 @@
             margin-bottom: 20px;
         }
 
-        /* API Help Link */
+        /* API Help Link Button */
         .api-help-btn {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            background: #e8f0fe;
+            gap: 8px;
+            background-color: #e8f0fe;
             color: var(--primary);
-            padding: 8px 16px;
+            padding: 10px 20px;
             border-radius: 50px;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 600;
             text-decoration: none;
-            transition: background 0.2s;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        .api-help-btn:hover { background: #d2e3fc; }
+        .api-help-btn:hover {
+            background-color: #d2e3fc;
+            transform: translateY(-1px);
+        }
 
         /* グリッドレイアウト */
         .app-grid {
@@ -100,6 +104,7 @@
         .app-card:nth-child(2) { animation-delay: 0.2s; }
         .app-card:nth-child(3) { animation-delay: 0.3s; }
         .app-card:nth-child(4) { animation-delay: 0.4s; }
+        .app-card:nth-child(5) { animation-delay: 0.5s; }
 
         .app-card:hover {
             transform: translateY(-8px);
@@ -120,10 +125,11 @@
         }
 
         /* 各アプリの色設定 */
-        .vlog-color { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); color: #d63384; }
-        .sanpo-color { background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); color: #059669; }
-        .trip-color { background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); color: #3b82f6; }
-        .prog-color { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #5b21b6; }
+        .cook-color { background: linear-gradient(135deg, #ff9f43 0%, #ff6b6b 100%); color: #fff; } /* オレンジ */
+        .prog-color { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; } /* 紫 */
+        .vlog-color { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); color: #d63384; } /* ピンク */
+        .sanpo-color { background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); color: #059669; } /* 緑 */
+        .trip-color { background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); color: #3b82f6; } /* 青 */
 
         .app-title {
             font-size: 1.25rem;
@@ -135,7 +141,7 @@
             font-size: 0.9rem;
             color: var(--text-sub);
             margin: 0 0 20px 0;
-            flex-grow: 1;
+            flex-grow: 1; /* カードの高さを揃える */
         }
 
         .open-btn {
@@ -184,6 +190,17 @@
 
     <div class="app-grid">
         
+        <a href="https://nonbiriikimasu.github.io/Cook/" class="app-card" target="_blank">
+            <div class="icon-box cook-color">
+                <span class="material-icons-round">restaurant_menu</span>
+            </div>
+            <h2 class="app-title">AI Chef</h2>
+            <p class="app-desc">
+                冷蔵庫の余り物や気分に合わせて、AIが最適なレシピを提案。買い物リストも自動作成します。
+            </p>
+            <div class="open-btn">アプリを開く <span class="material-icons-round" style="font-size:16px;">arrow_forward</span></div>
+        </a>
+
         <a href="https://nonbiriikimasu.github.io/Programing/" class="app-card" target="_blank">
             <div class="icon-box prog-color">
                 <span class="material-icons-round">code</span>
