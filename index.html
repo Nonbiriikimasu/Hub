@@ -105,6 +105,7 @@
         .app-card:nth-child(3) { animation-delay: 0.3s; }
         .app-card:nth-child(4) { animation-delay: 0.4s; }
         .app-card:nth-child(5) { animation-delay: 0.5s; }
+        .app-card:nth-child(6) { animation-delay: 0.6s; }
 
         .app-card:hover {
             transform: translateY(-8px);
@@ -125,6 +126,7 @@
         }
 
         /* 各アプリの色設定 */
+        .exam-color { background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: #fff; } /* インディゴ */
         .cook-color { background: linear-gradient(135deg, #ff9f43 0%, #ff6b6b 100%); color: #fff; } /* オレンジ */
         .prog-color { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; } /* 紫 */
         .vlog-color { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); color: #d63384; } /* ピンク */
@@ -141,7 +143,7 @@
             font-size: 0.9rem;
             color: var(--text-sub);
             margin: 0 0 20px 0;
-            flex-grow: 1; /* カードの高さを揃える */
+            flex-grow: 1;
         }
 
         .open-btn {
@@ -190,6 +192,17 @@
 
     <div class="app-grid">
         
+        <a href="https://nonbiriikimasu.github.io/Exam/" class="app-card" target="_blank">
+            <div class="icon-box exam-color">
+                <span class="material-icons-round">school</span>
+            </div>
+            <h2 class="app-title">Exam Prep AI</h2>
+            <p class="app-desc">
+                授業資料(PDF/画像)を読み込み、AIが試験問題を予想作成。要点のまとめ機能付き。
+            </p>
+            <div class="open-btn">アプリを開く <span class="material-icons-round" style="font-size:16px;">arrow_forward</span></div>
+        </a>
+
         <a href="https://nonbiriikimasu.github.io/Cook/" class="app-card" target="_blank">
             <div class="icon-box cook-color">
                 <span class="material-icons-round">restaurant_menu</span>
